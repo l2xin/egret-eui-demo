@@ -5,16 +5,10 @@ class SceneManager {
     private _stage:egret.DisplayObjectContainer // 设置所有场景所在的舞台(根)
 
     public mainScene:MainScene //主场景
-    public playerScene:PlayerScene //玩家场景
-    public heroScene:HeroScene //英雄场景
-    public goodsScene:GoodsScene //物品场景
     public aboutScene:AboutScene //关于场景
 
     constructor() {
         this.mainScene = new MainScene()
-        this.playerScene = new PlayerScene()
-        this.heroScene = new HeroScene()
-        this.goodsScene = new GoodsScene()
         this.aboutScene = new AboutScene()
     }
 
@@ -40,7 +34,7 @@ class SceneManager {
      * @param scene 不需要删除的场景
      */
     private removeOther(scene) {
-        let arr = [this.playerScene, this.heroScene, this.goodsScene, this.aboutScene]
+        let arr = [ this.aboutScene]
         arr.forEach((item)=> {
             if(scene === item) {
                 return 
@@ -102,31 +96,6 @@ class SceneManager {
         } 
 
         SceneManager.instance.removeOther(SceneManager.instance.mainScene)
-    }
-
-    /**
-     * 玩家场景
-     */
-    static toPlayerScene() {
-        this.instance.removeOther(this.instance.heroScene)
-        // 把玩家场景添加到主场景中
-        this.instance.mainScene.addChild(this.instance.playerScene)
-    }
-
-    /**
-     * 英雄场景
-     */
-    static toHeroScene() {
-        this.instance.removeOther(this.instance.heroScene)
-        this.instance.mainScene.addChild(this.instance.heroScene)
-    }
-
-    /**
-     * 物品场景
-     */
-    static toGoodsSene() {
-        this.instance.removeOther(this.instance.goodsScene)
-        this.instance.mainScene.addChild(this.instance.goodsScene)
     }
 
     /**

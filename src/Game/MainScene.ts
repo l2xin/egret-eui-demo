@@ -1,9 +1,7 @@
 class MainScene extends eui.Component implements  eui.UIComponent {
 
 	public Group_mbtn:eui.Group;
-	public mgtnPlayer:eui.ToggleButton;
-	public mbtnHero:eui.ToggleButton;
-	public mbtnGoods:eui.ToggleButton;
+
 	public mbtnAbout:eui.ToggleButton;
 
 	public constructor() {
@@ -46,7 +44,7 @@ class MainScene extends eui.Component implements  eui.UIComponent {
 	 */
 	public toggleBtn(btn:eui.ToggleButton | number) {
 		console.log('切换')
-		
+		 
 		// 先把所有的按钮都设置为不选中
 		for (let i = 0; i < this.Group_mbtn.numChildren; i++) {
 			let theBtn = <eui.ToggleButton>this.Group_mbtn.getChildAt(i)
@@ -66,21 +64,6 @@ class MainScene extends eui.Component implements  eui.UIComponent {
 		
 		switch (index) {
 			case 0:
-				// 调用静态方法切换到玩家场景
-				SceneManager.toPlayerScene()
-				// 把按钮的层级提高	
-				// this.numChildren表示所有的子元素数量
-				this.setChildIndex(this.Group_mbtn, this.numChildren)
-				break
-			case 1:
-				SceneManager.toHeroScene()
-				this.setChildIndex(this.Group_mbtn, this.numChildren)
-				break
-			case 2:
-				SceneManager.toGoodsSene()
-				this.setChildIndex(this.Group_mbtn, this.numChildren)
-				break
-			case 3:
 				SceneManager.toAboutSene()
 				this.setChildIndex(this.Group_mbtn, this.numChildren)
 			default:

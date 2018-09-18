@@ -27,3 +27,4 @@ var AboutScene = (function (_super) {
     return AboutScene;
 }(eui.Component));
 __reflect(AboutScene.prototype, "AboutScene", ["eui.UIComponent", "egret.DisplayObject"]);
+//# sourceMappingURL=AboutScene.js.map

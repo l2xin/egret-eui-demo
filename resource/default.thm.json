@@ -21,6 +21,9 @@
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
+		"resource/skins/AboutScene.exml",
+		"resource/skins/skins_item/mbtnAbout.exml",
+		"resource/skins/MainScene.exml",
 		"resource/eui_skins/ButtonSkin.exml",
 		"resource/eui_skins/CheckBoxSkin.exml",
 		"resource/eui_skins/HScrollBarSkin.exml",
@@ -33,19 +36,7 @@
 		"resource/eui_skins/TextInputSkin.exml",
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
-		"resource/eui_skins/VSliderSkin.exml",
-		"resource/skins/AboutScene.exml",
-		"resource/skins/GoodsScene.exml",
-		"resource/skins/HeroScene.exml",
-		"resource/skins/skins_item/mbtnPlayer.exml",
-		"resource/skins/skins_item/mbtnHero.exml",
-		"resource/skins/skins_item/mbtnGoods.exml",
-		"resource/skins/skins_item/mbtnAbout.exml",
-		"resource/skins/MainScene.exml",
-		"resource/skins/PlayerScene.exml",
-		"resource/skins/skins_item/goodsListItem.exml",
-		"resource/skins/skins_item/heroListItem.exml",
-		"resource/skins/skins_item/zhuangbeiItem.exml"
+		"resource/eui_skins/VSliderSkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }

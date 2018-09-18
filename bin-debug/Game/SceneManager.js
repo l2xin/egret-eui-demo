@@ -7,9 +7,6 @@ var __reflect = (this && this.__reflect) || function (p, c, t) {
 var SceneManager = (function () {
     function SceneManager() {
         this.mainScene = new MainScene();
-        this.playerScene = new PlayerScene();
-        this.heroScene = new HeroScene();
-        this.goodsScene = new GoodsScene();
         this.aboutScene = new AboutScene();
     }
     Object.defineProperty(SceneManager, "instance", {
@@ -34,7 +31,7 @@ var SceneManager = (function () {
      */
     SceneManager.prototype.removeOther = function (scene) {
         var _this = this;
-        var arr = [this.playerScene, this.heroScene, this.goodsScene, this.aboutScene];
+        var arr = [this.aboutScene];
         arr.forEach(function (item) {
             if (scene === item) {
                 return;
@@ -93,28 +90,6 @@ var SceneManager = (function () {
         SceneManager.instance.removeOther(SceneManager.instance.mainScene);
     };
     /**
-     * 玩家场景
-     */
-    SceneManager.toPlayerScene = function () {
-        this.instance.removeOther(this.instance.heroScene);
-        // 把玩家场景添加到主场景中
-        this.instance.mainScene.addChild(this.instance.playerScene);
-    };
-    /**
-     * 英雄场景
-     */
-    SceneManager.toHeroScene = function () {
-        this.instance.removeOther(this.instance.heroScene);
-        this.instance.mainScene.addChild(this.instance.heroScene);
-    };
-    /**
-     * 物品场景
-     */
-    SceneManager.toGoodsSene = function () {
-        this.instance.removeOther(this.instance.goodsScene);
-        this.instance.mainScene.addChild(this.instance.goodsScene);
-    };
-    /**
      * 关于场景
      */
     SceneManager.toAboutSene = function () {
@@ -124,3 +99,4 @@ var SceneManager = (function () {
     return SceneManager;
 }());
 __reflect(SceneManager.prototype, "SceneManager");
+//# sourceMappingURL=SceneManager.js.map

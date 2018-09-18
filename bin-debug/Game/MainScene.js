@@ -63,21 +63,6 @@ var MainScene = (function (_super) {
         var index = this.Group_mbtn.getChildIndex(btn);
         switch (index) {
             case 0:
-                // 调用静态方法切换到玩家场景
-                SceneManager.toPlayerScene();
-                // 把按钮的层级提高	
-                // this.numChildren表示所有的子元素数量
-                this.setChildIndex(this.Group_mbtn, this.numChildren);
-                break;
-            case 1:
-                SceneManager.toHeroScene();
-                this.setChildIndex(this.Group_mbtn, this.numChildren);
-                break;
-            case 2:
-                SceneManager.toGoodsSene();
-                this.setChildIndex(this.Group_mbtn, this.numChildren);
-                break;
-            case 3:
                 SceneManager.toAboutSene();
                 this.setChildIndex(this.Group_mbtn, this.numChildren);
             default:
@@ -87,3 +72,4 @@ var MainScene = (function (_super) {
     return MainScene;
 }(eui.Component));
 __reflect(MainScene.prototype, "MainScene", ["eui.UIComponent", "egret.DisplayObject"]);
+//# sourceMappingURL=MainScene.js.map
