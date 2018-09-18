@@ -42,40 +42,6 @@ var SceneManager = (function () {
         });
     };
     /**
-     * 在主场景显示选择的数据
-     */
-    SceneManager.showInfo = function (arr) {
-        var text = '你选择了: ';
-        if (arr.length === 0) {
-            text = '厉害了什么都不选';
-        }
-        else {
-            text += arr.toString();
-        }
-        // 新建一个消息背景图
-        var img = new egret.Bitmap();
-        img.texture = RES.getRes('toast-bg_png');
-        SceneManager.instance.mainScene.addChild(img);
-        img.x = SceneManager.instance.mainScene.width / 2 - img.width / 2;
-        img.y = 500;
-        img.height = 40;
-        // 新建一个label用来显示
-        var label = new egret.TextField();
-        label.text = text;
-        label.size = 20;
-        SceneManager.instance.mainScene.addChild(label);
-        label.x = SceneManager.instance.mainScene.width / 2 - label.width / 2;
-        label.y = 510;
-        label.height = 40;
-        // 创建一个定时器,1000毫秒后删除label
-        var timer = new egret.Timer(1000, 1);
-        timer.start();
-        timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, function (e) {
-            SceneManager.instance.mainScene.removeChild(label);
-            SceneManager.instance.mainScene.removeChild(img);
-        }, this);
-    };
-    /**
      * 主场景
      */
     SceneManager.toMainScene = function () {

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Lobby" width="400" height="300" xmlns:e="http://ns.egret.com/eui">
+	<e:Image left="0" right="0" top="0" bottom="0" source="painter_caidi_png"/>
+</e:Skin>

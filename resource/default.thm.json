@@ -22,6 +22,7 @@
 	"autoGenerateExmlsList": true,
 	"exmls": [
 		"resource/skins/AboutScene.exml",
+		"resource/skins/Lobby.exml",
 		"resource/skins/skins_item/mbtnAbout.exml",
 		"resource/skins/MainScene.exml",
 		"resource/eui_skins/ButtonSkin.exml",

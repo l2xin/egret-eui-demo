@@ -1,5 +1,7 @@
 declare class AboutSceneSkin extends eui.Skin{
 }
+declare class Lobby extends eui.Skin{
+}
 declare class MainSceneSkin extends eui.Skin{
 }
 declare module skins{
