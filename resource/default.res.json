@@ -126,11 +126,6 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
 			"url": "assets/egret_icon.png",
 			"type": "image",
 			"name": "egret_icon_png"
@@ -139,16 +134,6 @@
 			"url": "config/description.json",
 			"type": "json",
 			"name": "description_json"
-		},
-		{
-			"url": "art/about/about-bg.png",
-			"type": "image",
-			"name": "about-bg_png"
-		},
-		{
-			"url": "art/about/about.png",
-			"type": "image",
-			"name": "about_png"
 		},
 		{
 			"url": "art/about/close.png",
